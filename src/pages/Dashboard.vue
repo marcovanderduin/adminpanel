@@ -8,22 +8,22 @@
           :chart-data="dailySalesChart.data"
           :chart-options="dailySalesChart.options"
           :chart-type="'Line'"
-          data-background-color="blue"
+          data-background-color="red"
         >
           <template slot="content">
-            <h4 class="title">Daily Sales</h4>
+            <h4 class="title">Dagelijkse reserveringen</h4>
             <p class="category">
               <span class="text-success"
-                ><i class="fas fa-long-arrow-alt-up"></i> 55%
+                ><i class="fas fa-long-arrow-alt-up"></i> xAantal%
               </span>
-              increase in today sales.
+              stijging t.o.v. vorige maand
             </p>
           </template>
 
           <template slot="footer">
             <div class="stats">
               <md-icon>access_time</md-icon>
-              updated 4 minutes ago
+              geüpdated 23 uur geleden
             </div>
           </template>
         </chart-card>

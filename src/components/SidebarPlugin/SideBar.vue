@@ -13,7 +13,7 @@
       </a>
 
       <a
-        href="https://www.creative-tim.com/product/vue-material-dashboard"
+        href="/dashboard"
         target="_blank"
         class="simple-text logo-normal"
       >
@@ -47,11 +47,11 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Vue MD",
+      default: "GoGoGo!",
     },
     sidebarBackgroundImage: {
       type: String,
-      default: require("@/assets/img/sidebar-2.jpg"),
+      default: require("@/assets/img/sidebarimage.jpg"),
     },
     imgLogo: {
       type: String,
@@ -59,7 +59,7 @@ export default {
     },
     sidebarItemColor: {
       type: String,
-      default: "green",
+      default: "red",
       validator: (value) => {
         let acceptedValues = ["", "purple", "blue", "green", "orange", "red"];
         return acceptedValues.indexOf(value) !== -1;
