@@ -18,12 +18,12 @@ const routes = [
       },
       {
         path: "user",
-        name: "User Profile",
+        name: "Scooter Informatie",
         component: UserProfile,
       },
       {
         path: "table",
-        name: "Table List",
+        name: "Accounts",
         component: TableList,
       },
       {
