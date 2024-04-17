@@ -13,8 +13,6 @@
       </a>
 
       <a
-        href="/dashboard"
-        target="_blank"
         class="simple-text logo-normal"
       >
         {{ title }}
@@ -51,11 +49,11 @@ export default {
     },
     sidebarBackgroundImage: {
       type: String,
-      default: require("@/assets/img/sidebarimage.jpg"),
+      default: require("@/assets/img/groningen.jpg"),
     },
     imgLogo: {
       type: String,
-      default: require("@/assets/img/vue-logo.png"),
+      default: require("@/assets/img/logo.png"),
     },
     sidebarItemColor: {
       type: String,

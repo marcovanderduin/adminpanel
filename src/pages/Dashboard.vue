@@ -39,14 +39,14 @@
           data-background-color="red"
         >
           <template slot="content">
-            <h4 class="title">Email Subscription</h4>
-            <p class="category">Last Campaign Performance</p>
+            <h4 class="title">Nieuwe accounts</h4>
+            <p class="category">Maandelijkse nieuwe aanmeldingen</p>
           </template>
 
           <template slot="footer">
             <div class="stats">
               <md-icon>access_time</md-icon>
-              updated 10 days ago
+              geüpdated 10 dagen geleden
             </div>
           </template>
         </chart-card>
