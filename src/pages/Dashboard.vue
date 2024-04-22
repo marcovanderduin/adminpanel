@@ -61,112 +61,25 @@
           data-background-color="green"
         >
           <template slot="content">
-            <h4 class="title">Completed Tasks</h4>
-            <p class="category">Last Campaign Performance</p>
+            <h4 class="title">Popualaire tijden</h4>
+            <p class="category">Uren per dag</p>
           </template>
 
           <template slot="footer">
             <div class="stats">
               <md-icon>access_time</md-icon>
-              campaign sent 26 minutes ago
+              geüpdated 1 uur geleden
             </div>
           </template>
         </chart-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="green">
-          <template slot="header">
-            <md-icon>store</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Revenue</p>
-            <h3 class="title">$34,245</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>date_range</md-icon>
-              Last 24 Hours
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="orange">
-          <template slot="header">
-            <md-icon>content_copy</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Used Space</p>
-            <h3 class="title">
-              49/50
-              <small>GB</small>
-            </h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon class="text-danger">warning</md-icon>
-              <a href="#pablo">Get More Space...</a>
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="red">
-          <template slot="header">
-            <md-icon>info_outline</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Fixed Issues</p>
-            <h3 class="title">75</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>local_offer</md-icon>
-              Tracked from Github
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="blue">
-          <template slot="header">
-            <i class="fab fa-twitter"></i>
-          </template>
-
-          <template slot="content">
-            <p class="category">Folowers</p>
-            <h3 class="title">+245</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>update</md-icon>
-              Just Updated
-            </div>
-          </template>
-        </stats-card>
       </div>
       <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
       >
         <md-card>
           <md-card-header data-background-color="orange">
-            <h4 class="title">Employees Stats</h4>
-            <p class="category">New employees on 15th September, 2016</p>
+            <h4 class="title">Nieuwe aanmeldingen</h4>
+            <p class="category">Sinds aanmeldingen sinds 2024</p>
           </md-card-header>
           <md-card-content>
             <ordered-table table-header-color="orange"></ordered-table>
@@ -183,14 +96,6 @@
               <md-tab id="tab-home" md-label="Bugs" md-icon="bug_report">
                 <nav-tabs-table></nav-tabs-table>
               </md-tab>
-
-              <md-tab id="tab-pages" md-label="Website" md-icon="code">
-                <nav-tabs-table></nav-tabs-table>
-              </md-tab>
-
-              <md-tab id="tab-posts" md-label="server" md-icon="cloud">
-                <nav-tabs-table></nav-tabs-table>
-              </md-tab>
             </md-tabs>
           </template>
         </nav-tabs-card>
@@ -201,7 +106,6 @@
 
 <script>
 import {
-  StatsCard,
   ChartCard,
   NavTabsCard,
   NavTabsTable,
@@ -210,7 +114,6 @@ import {
 
 export default {
   components: {
-    StatsCard,
     ChartCard,
     NavTabsCard,
     NavTabsTable,
@@ -220,8 +123,8 @@ export default {
     return {
       dailySalesChart: {
         data: {
-          labels: ["M", "T", "W", "T", "F", "S", "S"],
-          series: [[12, 17, 7, 17, 23, 18, 38]],
+          labels: ["Ma", "di", "Wo", "do", "Vr", "Za", "Zo"],
+          series: [[12, 17, 7, 17, 23, 38, 20]],
         },
         options: {
           lineSmooth: this.$Chartist.Interpolation.cardinal({
@@ -239,8 +142,8 @@ export default {
       },
       dataCompletedTasksChart: {
         data: {
-          labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-          series: [[230, 750, 450, 300, 280, 240, 200, 190]],
+          labels: ["00:00", "3:00", "6:00", "9:00", "12:00", "15:00", "18:00", "21:00"],
+          series: [[10, 2, 8, 34, 24, 38, 18, 12]],
         },
 
         options: {
@@ -248,7 +151,7 @@ export default {
             tension: 0,
           }),
           low: 0,
-          high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: {
             top: 0,
             right: 0,
@@ -260,21 +163,21 @@ export default {
       emailsSubscriptionChart: {
         data: {
           labels: [
-            "Ja",
-            "Fe",
-            "Ma",
-            "Ap",
-            "Mai",
-            "Ju",
+            "Jan",
+            "Feb",
+            "Maa",
+            "Apr",
+            "Mei",
+            "Jun",
             "Jul",
-            "Au",
-            "Se",
-            "Oc",
-            "No",
-            "De",
+            "Aug",
+            "Sep",
+            "Okt",
+            "Nov",
+            "Dec",
           ],
           series: [
-            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
+            [10, 20, 5, 7, 12, 9, 14, 32, 3, 11, 10, 22],
           ],
         },
         options: {
@@ -282,7 +185,7 @@ export default {
             showGrid: false,
           },
           low: 0,
-          high: 1000,
+          high: 100,
           chartPadding: {
             top: 0,
             right: 5,

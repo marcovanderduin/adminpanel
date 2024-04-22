@@ -11,11 +11,11 @@
         <md-icon>dashboard</md-icon>
         <p>Home</p>
       </sidebar-link>
-      <sidebar-link to="/user">
+      <sidebar-link to="/scooters">
         <md-icon>delivery_dining</md-icon>
         <p>Scooters informatie</p>
       </sidebar-link>
-      <sidebar-link to="/table">
+      <sidebar-link to="/accounts">
         <md-icon>manage_accounts</md-icon>
         <p>Accounts</p>
       </sidebar-link>
@@ -36,26 +36,23 @@
 
       <dashboard-content> </dashboard-content>
 
-      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
     </div>
   </div>
 </template>
 
 <script>
 import TopNavbar from "./TopNavbar.vue";
-import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 
 export default {
   components: {
     TopNavbar,
     DashboardContent,
-    ContentFooter,
   },
   data() {
     return {
-      sidebarBackground: "green",
-      sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
+      sidebarBackground: "red",
+      sidebarBackgroundImage: require("@/assets/img/groningen.jpg"),
     };
   },
 };

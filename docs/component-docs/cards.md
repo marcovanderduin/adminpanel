@@ -3,7 +3,7 @@
 We think cards are one of the best ways to organise your information. We went all out with possibilities and we recommended finding the right fit for your product.
 
 ```js
-import { StatsCard } from "src/components";
+// import { StatsCard } from "src/components";
 import { ChartCard } from "src/components";
 ```
 
@@ -11,7 +11,7 @@ import { ChartCard } from "src/components";
 
 ```js
 components: {
-  ChartCard, StatsCard;
+  ChartCard;
 }
 ```
 
@@ -19,7 +19,7 @@ components: {
 
 ```js
 Vue.component(ChartCard);
-Vue.component(StatsCard);
+// Vue.component(StatsCard);
 ```
 
 <script>
@@ -28,7 +28,7 @@ module.exports = {
    return {
     dailySalesChart: {
           data: {
-            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            labels: ['M', 'D', 'W', 'T', 'F', 'S', 'S'],
             series: [
               [12, 17, 7, 17, 23, 18, 38]
             ]
@@ -67,10 +67,10 @@ module.exports = {
         Last 24 Hours
     </div>
   </template>
-</stats-card>
+</stats-card> -->
 
 ```html
-<template>
+<!-- <template>
   <div>
     <stats-card data-background-color="green">
       <template slot="header">

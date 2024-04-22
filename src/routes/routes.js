@@ -2,7 +2,7 @@ import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 
 import Dashboard from "@/pages/Dashboard.vue";
 import Scooters from "@/pages/Scooters.vue";
-import TableList from "@/pages/TableList.vue";
+import TableList from "@/pages/Accounts.vue";
 import Maps from "@/pages/Maps.vue";
 
 const routes = [
@@ -17,12 +17,12 @@ const routes = [
         component: Dashboard,
       },
       {
-        path: "user",
+        path: "scooters",
         name: "Scooter Informatie",
         component: Scooters,
       },
       {
-        path: "table",
+        path: "accounts",
         name: "Accounts",
         component: TableList,
       },
