@@ -1,4 +1,3 @@
-User
 <template>
   <div class="content">
     <div class="md-layout">
@@ -15,13 +14,14 @@ User
                   <md-table-cell md-label="Scooter">{{ item.id }}</md-table-cell>
                   <md-table-cell md-label="Locatie">{{ item.locationName }}</md-table-cell>
                   <md-table-cell md-label="Batterij in %">{{ item.battery }}</md-table-cell>
-                  <md-table-cell md-label="Bijzonderheden">
+                  <md-table-cell md-label="Status">
                     <md-select v-model="item.status" @change="updateStatus(item)" multiple>
                       <md-option value="Actief">Actief</md-option>
                       <md-option value="Reparatie vereist">Reparatie vereist</md-option>
                       <md-option value="Onderhoud vereist">Onderhoud vereist</md-option>
                     </md-select>
                   </md-table-cell>
+                  <md-table-cell md-label="Gebruiker"></md-table-cell>
                 </md-table-row>
               </md-table>
             </div>
