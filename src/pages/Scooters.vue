@@ -1,9 +1,10 @@
+User
 <template>
   <div class="content">
     <div class="md-layout">
       <div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100">
         <md-card class="md-card-plain">
-          <md-card-header data-background-color="green">
+          <md-card-header data-background-color="red">
             <h4 class="title">Scooter Informatie</h4>
             <p class="category">ID // Plaats // Batterij in % // Bijzonderheden</p>
           </md-card-header>
@@ -12,9 +13,7 @@
               <md-table v-model="scooterLocations" :table-header-color="tableHeaderColor">
                 <md-table-row slot="md-table-row" slot-scope="{ item }">
                   <md-table-cell md-label="Scooter">{{ item.id }}</md-table-cell>
-                  <md-table-cell md-label="Longitude">{{ item.lonLat[0] }}</md-table-cell>
-                  <md-table-cell md-label="Latitude">{{ item.lonLat[1] }}</md-table-cell>
-                  <md-table-cell md-label="Plaatsnaam">{{ item.locationName }}</md-table-cell>
+                  <md-table-cell md-label="Locatie">{{ item.locationName }}</md-table-cell>
                   <md-table-cell md-label="Batterij in %">{{ item.battery }}</md-table-cell>
                   <md-table-cell md-label="Bijzonderheden">
                     <md-select v-model="item.status" @change="updateStatus(item)" multiple>
@@ -43,7 +42,7 @@ export default {
   props: {
     tableHeaderColor: {
       type: String,
-      default: "green",
+      default: "red",
     },
   },
   data() {
@@ -67,6 +66,7 @@ export default {
             format: 'json',
             lat: location.lonLat[1],
             lon: location.lonLat[0],
+            zoom: 14,
           },
         });
         

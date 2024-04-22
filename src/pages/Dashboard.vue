@@ -58,7 +58,7 @@
           :chart-data="dataCompletedTasksChart.data"
           :chart-options="dataCompletedTasksChart.options"
           :chart-type="'Line'"
-          data-background-color="green"
+          data-background-color="red"
         >
           <template slot="content">
             <h4 class="title">Popualaire tijden</h4>
@@ -73,32 +73,33 @@
           </template>
         </chart-card>
       </div>
+
       <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
+        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100"
       >
         <md-card>
-          <md-card-header data-background-color="orange">
-            <h4 class="title">Nieuwe aanmeldingen</h4>
-            <p class="category">Sinds aanmeldingen sinds 2024</p>
+          <md-card-header data-background-color="red">
+            <h4 class="title">Reserveringen</h4>
+            <p class="category">Overzicht van de laatste reserveringen</p>
           </md-card-header>
           <md-card-content>
-            <ordered-table table-header-color="orange"></ordered-table>
+            <ReserveringsTabel table-header-color="red"></ReserveringsTabel>
           </md-card-content>
         </md-card>
       </div>
+
       <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
+        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-100"
       >
-        <nav-tabs-card>
-          <template slot="content">
-            <span class="md-nav-tabs-title">Tasks:</span>
-            <md-tabs class="md-success" md-alignment="left">
-              <md-tab id="tab-home" md-label="Bugs" md-icon="bug_report">
-                <nav-tabs-table></nav-tabs-table>
-              </md-tab>
-            </md-tabs>
-          </template>
-        </nav-tabs-card>
+        <md-card>
+          <md-card-header data-background-color="red">
+            <h4 class="title">Accounts</h4>
+            <p class="category">Overzicht van alle laatst aangemelde accounts</p>
+          </md-card-header>
+          <md-card-content>
+            <AccountsTabel table-header-color="red"></AccountsTabel>
+          </md-card-content>
+        </md-card>
       </div>
     </div>
   </div>
@@ -107,17 +108,15 @@
 <script>
 import {
   ChartCard,
-  NavTabsCard,
-  NavTabsTable,
-  OrderedTable,
+  AccountsTabel,
+  ReserveringsTabel,
 } from "@/components";
 
 export default {
   components: {
     ChartCard,
-    NavTabsCard,
-    NavTabsTable,
-    OrderedTable,
+    AccountsTabel,
+    ReserveringsTabel,
   },
   data() {
     return {
